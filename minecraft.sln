@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minecraft.Desktop", "desktop\minecraft.Desktop.csproj", "{6AEE48EE-C514-47C3-B9D9-DB9688337E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minecraft.Application", "application\minecraft.Application.csproj", "{387D92B3-1086-4CEF-9353-077DCE0B9D17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "minecraft.Application.Resources", "resources\minecraft.Application.Resources.csproj", "{1B7566A2-0CEF-449A-82B9-C85C0A9BF8C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D29A2153-C171-457E-A147-720976BA430F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+		analysis\csharp.ruleset = analysis\csharp.ruleset
+		minecraft.sln.DotSettings = minecraft.sln.DotSettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AEE48EE-C514-47C3-B9D9-DB9688337E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEE48EE-C514-47C3-B9D9-DB9688337E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEE48EE-C514-47C3-B9D9-DB9688337E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEE48EE-C514-47C3-B9D9-DB9688337E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{387D92B3-1086-4CEF-9353-077DCE0B9D17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{387D92B3-1086-4CEF-9353-077DCE0B9D17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{387D92B3-1086-4CEF-9353-077DCE0B9D17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{387D92B3-1086-4CEF-9353-077DCE0B9D17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B7566A2-0CEF-449A-82B9-C85C0A9BF8C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B7566A2-0CEF-449A-82B9-C85C0A9BF8C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B7566A2-0CEF-449A-82B9-C85C0A9BF8C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B7566A2-0CEF-449A-82B9-C85C0A9BF8C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
