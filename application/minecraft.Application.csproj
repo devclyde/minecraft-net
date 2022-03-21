@@ -4,6 +4,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <NoWarn>$(NoWarn);CS1591;NU5104</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup Label="Project References">
@@ -13,5 +14,7 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
     <PackageReference Include="OpenTK.Windowing.GraphicsLibraryFramework" Version="4.7.1" />
     <PackageReference Include="OpenTK.Graphics" Version="4.7.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0-eap3" />
   </ItemGroup>
 </Project>
