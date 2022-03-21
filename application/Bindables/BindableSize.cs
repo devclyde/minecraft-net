@@ -1,0 +1,51 @@
+﻿using System.Drawing;
+
+namespace minecraft.Application.Bindables;
+
+/// <summary>
+/// Represents a <see cref="Size"/> bindable with defined component-wise constraints applied to it.
+/// </summary>
+public class BindableSize : RangeConstrainedBindable<Size>
+{
+    protected override Size DefaultMinValue => new(int.MinValue, int.MinValue);
+    protected override Size DefaultMaxValue => new(int.MaxValue, int.MaxValue);
+
+    public BindableSize(Size defaultValue = default)
+        : base(defaultValue)
+    {
+    }
+
+    public override string ToString() => $"{Value.Width}x{Value.Height}";
+
+    public override void Parse(object input)
+    {
+        switch (input)
+        {
+            case string str:
+                string[] split = str.Split('x');
+
+                if (split.Length != 2)
+                    throw new ArgumentException($"Input string was in wrong format! (expected: '<width>x<height>', actual: '{str}')");
+
+                Value = new Size(int.Parse(split[0]), int.Parse(split[1]));
+                break;
+
+            default:
+                base.Parse(input);
+                break;
+        }
+    }
+
+    protected override Bindable<Size> CreateInstance() => new BindableSize();
+
+    protected sealed override Size ClampValue(Size value, Size minValue, Size maxValue)
+    {
+        return new Size
+        {
+            Width = Math.Clamp(value.Width, minValue.Width, maxValue.Width),
+            Height = Math.Clamp(value.Height, minValue.Height, maxValue.Height)
+        };
+    }
+
+    protected sealed override bool IsValidRange(Size min, Size max) => min.Width <= max.Width && min.Height <= max.Height;
+}
